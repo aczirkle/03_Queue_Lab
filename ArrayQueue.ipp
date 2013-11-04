@@ -29,8 +29,6 @@ delete[] backingArray;
 
 template <class T>
 void ArrayQueue<T>::add(T toAdd){
-if(numItems>400000)
-  numItems=0;
 if(numItems==backingArraySize){
   grow();}
 backingArray[(front+numItems)%backingArraySize] = toAdd;
